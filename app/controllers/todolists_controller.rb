@@ -10,6 +10,11 @@ class TodolistsController < ApplicationController
   end
 
 
+  def index
+    @lists = List.all
+  end
+
+
   def list_params
     params.require(:list).permit(:title, :body)
   end
